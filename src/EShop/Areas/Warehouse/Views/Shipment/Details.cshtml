@@ -1,0 +1,29 @@
+﻿@model EShop.Data.Shipment
+
+
+<table class="table table-hover table-bordered" width="100%">    
+    <thead>
+    <tr>
+        <th>
+            Shipment from
+        </th>
+        <th>
+            Shipment number
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Model.From
+            </td>
+            <td>
+                @Model.Number
+            </td>
+            <td>
+                @Html.ActionLink("Edit shipment", "Edit", "Shipment", new { id = Model.Id})
+            </td>
+        </tr>
+    </tbody>
+</table>

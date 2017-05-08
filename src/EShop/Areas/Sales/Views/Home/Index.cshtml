@@ -1,0 +1,12 @@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>This is Home page of Sales area </h2>
+
+Sales area, differently from Admin area, doesn't have Create category and create item functionality <label class="btn btn-default">
+    <a asp-area="Sales" asp-controller="Category" asp-action="Index" target="_blank">Go to category index</a>
+</label>. It can Edit only item Price property.
+
+

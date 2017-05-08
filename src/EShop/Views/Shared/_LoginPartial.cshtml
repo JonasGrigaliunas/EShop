@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using EShop.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="">
+        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <img src="images/img.jpg" alt="">@UserManager.GetUserName(User)
+            <span class="fa fa-angle-down"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-usermenu pull-right">
+            <li><a href="javascript:;"> Profile</a></li>
+            <li>
+                <a href="javascript:;">
+                    <span class="badge bg-red pull-right">50%</span>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li><a href="javascript:;">Help</a></li>
+            <li>
+                <form asp-area="" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link">Log off</button>
+                </form>
+            </li>
+        </ul>
+    </li>    
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
+        <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
+    </ul>
+}

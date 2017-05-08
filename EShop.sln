@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EE0D676A-E8D9-4084-8260-A68CEE0B88A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AB2CA958-4AA9-4A3A-8C72-11A5BBF1EEA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EShop", "src\EShop\EShop.csproj", "{6E646D72-8047-40FE-ADE3-189A567EE710}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E646D72-8047-40FE-ADE3-189A567EE710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E646D72-8047-40FE-ADE3-189A567EE710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E646D72-8047-40FE-ADE3-189A567EE710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E646D72-8047-40FE-ADE3-189A567EE710}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E646D72-8047-40FE-ADE3-189A567EE710} = {EE0D676A-E8D9-4084-8260-A68CEE0B88A1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>This is Home page of Admin area </h2>
+
+In this Area user can see Category list or create new category <label class="btn btn-default">
+    <a asp-area="Admin" asp-controller="Category" asp-action="Index" target="_blank">Go to category index</a>
+</label>. In category/Details window user can create sub-categories, create items and assign them to category. 
+Also user can use category navigation (breadcrumbs). At the bottom, where are sub-category and items lists that are already assigned to category.
+In item/Details -> Edit window user can Edit all item's parameters.
+
+
+

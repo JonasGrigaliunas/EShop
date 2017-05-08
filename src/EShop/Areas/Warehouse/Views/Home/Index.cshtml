@@ -1,0 +1,15 @@
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>This is Home page of Warehouse area</h2>
+
+Warehouse area's functionality is similar to Sales, except warehouse user can Edit only item's Quantity property <label class="btn btn-default">
+    <a asp-area="Warehouse" asp-controller="Category" asp-action="Index" target="_blank">Go to category index</a>
+</label>.
+Warehouse area also have Shipments <label class="btn btn-default">
+    <a asp-area="Warehouse" asp-controller="Shipment" asp-action="Index" target="_blank">Go to shipment index</a>
+</label>. User can create shipment, view shipment list and search for shipments. In Shipment/Edit window user can Edit shipment
+parameters, add ShipmentItems and remove them. Total item's quantity change accordingly with these operations.
+

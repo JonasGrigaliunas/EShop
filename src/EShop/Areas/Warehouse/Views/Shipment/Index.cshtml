@@ -1,0 +1,47 @@
+﻿
+@using EShop.Areas.Warehouse.Models
+@*Kodel cia nereikia tikslaus modelio, kuris atvaizduotu Shipment modeli.
+Gal virsutines eilutes apskritai nereikia *@
+
+@model IList<EShop.Data.Shipment>
+
+<form>
+    Search by number<br>
+    <input type="text" name="searchBoxInput">
+</form>
+<br>
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Shipment number
+            </th>
+            <th>
+                From
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var shipment in Model)
+        {
+            <tr>
+                <td>
+                    @shipment.Number 
+                </td>
+                <td>
+                    @shipment.From
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Shipment", new { id = shipment.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-round btn-success" >
+    @Html.ActionLink("Create shipment", "Create", "Shipment", null, new { style = "color:white" })
+</button>

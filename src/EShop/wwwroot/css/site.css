@@ -1,0 +1,7 @@
+﻿.table-hover > tbody > tr:hover {
+    background-color: #dcdcdc;
+}
+
+.read-only-value{
+    padding-top: 8px;
+}

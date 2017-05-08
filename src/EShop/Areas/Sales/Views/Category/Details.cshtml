@@ -1,0 +1,100 @@
+﻿@using EShop.Models.CategoryViewModels
+@using EShop.Models.ItemViewModel
+@model EShop.Models.CategoryViewModels.CategoryItemDetailsViewModel
+
+
+<ol class="breadcrumb">
+    <li>@Html.ActionLink("Index", "Index", new {})</li>
+    @foreach (var pathItem in Model.CategoryPath)
+    {
+        <li>@Html.ActionLink(pathItem.Name, "Details", new {id = pathItem.Id})</li>
+    }
+
+    <li class="active">@Model.Name</li>
+</ol>
+
+<div class="jumbotron">
+    <h1>@Model.Name</h1>
+    <p>@Model.Description</p>
+</div>
+
+
+<table class="table table-hover table-bordered" width="100%">
+    <thead>
+    <tr>
+        <th>
+            Child category name
+        </th>
+        <th>
+            Description
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var category in Model.ChildCategories)
+    {
+        <tr>
+            <td>
+                @category.Name
+            </td>
+            <td>
+                @category.Description
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new {id = category.Id})
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<table class="table table-hover table-bordered" width="100%">
+    <thead>
+    <tr>
+        <th>
+            Item name
+        </th>
+        <th>
+            Code
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+        
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Items)
+        
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Code
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @item.Price
+            </td>
+            <td>
+                @item.Quantity
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", "Item", new { id = item.Id})
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

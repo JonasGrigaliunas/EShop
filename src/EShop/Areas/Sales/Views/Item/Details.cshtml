@@ -1,0 +1,56 @@
+﻿@using EShop.Models.CategoryViewModels
+@using EShop.Models.ItemViewModel
+@model ItemDetailsViewModel
+
+
+<table class="table table-hover table-bordered" width="100%">
+    
+    <thead>
+    <tr>
+        <th>
+            Item name
+        </th>
+        <th>
+            Code
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Model.Name
+            </td>
+            <td>
+                @Model.Code
+            </td>
+            <td>
+                @Model.Description
+            </td>
+            <td>
+                @Model.Price
+            </td>
+            <td>
+                @Model.Quantity
+            </td>
+            <td>
+                @Html.ActionLink("Edit price", "Edit", "Item", new { id = Model.Id})
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+        @Html.ActionLink("Back to category details", "Details", "Category", new { id = Model.CategoryId})
+    </div>
