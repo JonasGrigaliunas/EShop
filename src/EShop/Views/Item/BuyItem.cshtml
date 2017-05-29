@@ -1,0 +1,71 @@
+﻿
+@inject UserManager<ApplicationUser> UserManager
+
+@model EShop.Models.ItemViewModel.BuyItemViewModel
+
+@{
+    ViewBag.Title = "BuyItem";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="main_container">
+        <div class="form-horizontal">
+            <div class="left_col"></div>
+            <div class="right_col">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.CategoryId)
+                @Html.HiddenFor(model => model.Id)
+                @Html.HiddenFor(model => model.Code)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4 read-only-value">
+                        @Html.DisplayTextFor(model => model.Name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Quantity, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-1 read-only-value">
+                        @Html.DisplayTextFor(model => model.Quantity)
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-2 read-only-value">
+                            @Html.DisplayTextFor(model => model.Price)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-4 read-only-value">
+                            @Html.DisplayTextFor(model => model.Description)
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-4 read-only-value">
+                            @Html.DisplayTextFor(model => model.Code)
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Buy" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+}

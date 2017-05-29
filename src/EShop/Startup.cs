@@ -101,6 +101,8 @@ namespace EShop
             builder.RegisterType<ItemListHandler>().As<IItemListHandler>().InstancePerLifetimeScope();
 
             builder.RegisterType<ShipmentItemReader>().As(typeof(IReader<ShipmentItem>)).InstancePerLifetimeScope();
+
+            builder.RegisterType<BuyItemHandler>().As<IBuyItemHandler>().InstancePerLifetimeScope();
             
 
 
@@ -143,7 +145,8 @@ namespace EShop
                     template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
                 routes.MapRoute(
                     "default",
-                    "{area=Admin}/{controller=Home}/{action=Index}/{id?}");
+                    "{controller=Category}/{action=Index}/{id?}");
+                
             });
         }
     }

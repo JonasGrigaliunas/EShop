@@ -95,7 +95,11 @@
                 @item.Quantity
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", "Item", new { id = item.Id})
+                @Html.ActionLink("Item details", "Details", "Item", new { id = item.Id}, 
+               htmlAttributes: new { @class = "btn btn-primary btn-xs" })
+                
+                @Html.ActionLink("Buy item", "BuyItem", "Item", new { id = item.Id },
+               htmlAttributes: new { @class = "btn btn-primary btn-xs" })
             </td>
         </tr>
     }
