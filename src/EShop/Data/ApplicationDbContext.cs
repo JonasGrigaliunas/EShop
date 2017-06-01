@@ -58,7 +58,7 @@ namespace EShop.Data
             builder.Entity<OrderItem>()
                 .HasOne(x => x.Item)
                 .WithMany(x => x.OrderItems)
-                .HasForeignKey(x => x.OrderId);
+                .HasForeignKey(x => x.ItemId);
         }
     }
 }
